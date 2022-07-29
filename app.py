@@ -1,82 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-import random
-import string
-import os
-
-#app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# db = SQLAlchemy(app)
-
-# @app.before_first_request
-# def create_tables():
-#     db.create_all()
-
-# class Urls(db.Model):
-#     id_ = db.Column("id_", db.Integer, primary_key=True)
-#     long = db.Column("long", db.String())
-#     short = db.Column("short", db.String(10))
-
-#     def __init__(self, long, short):
-#         self.long = long
-#         self.short = short
-
-# def shorten_url():
-#     letters = string.ascii_lowercase + string.ascii_uppercase
-#     while True:
-#         rand_letters = random.choices(letters, k=3)
-#         rand_letters = "".join(rand_letters)
-#         short_url = Urls.query.filter_by(short=rand_letters).first()
-#         if not short_url:
-#             return rand_letters
-
-
-# @app.route('/', methods=['POST', 'GET'])
-# def home():
-#     if request.method == "POST":
-#         url_received = request.form["nm"]
-#         found_url = Urls.query.filter_by(long=url_received).first()
-
-#         if found_url:
-#             return redirect(url_for("display_short_url", url=found_url.short))
-#         else:
-#             short_url = shorten_url()
-#             print(short_url)
-#             new_url = Urls(url_received, short_url)
-#             db.session.add(new_url)
-#             db.session.commit()
-#             return redirect(url_for("display_short_url", url=short_url))
-#     else:
-#         return render_template('url_page.html')
-
-# @app.route('/<short_url>')
-# def redirection(short_url):
-#     long_url = Urls.query.filter_by(short=short_url).first()
-#     if long_url:
-#         return redirect(long_url.long)
-#     else:
-#         return f'<h1>Url doesnt exist</h1>'
-
-# @app.route('/display/<url>')
-# def display_short_url(url):
-#     return render_template('shorturl.html', short_url_display=url)
-
-# @app.route('/all_urls')
-# def display_all():
-#     return render_template('all_urls.html', vals=Urls.query.all())
-
-# if __name__ == '__main__':
-#     app.run(port=5000, debug=True)
-
+from imp import reload
 import sys
 import os
-
+import MySQLdb
 # Flask Import
 from flask import Flask , request , redirect , render_template , url_for 
 from flask import jsonify , abort , make_response 
-import MySQLdb
+
 
 # Toekn and URL check import
 from check_encode import random_token , url_check
@@ -96,16 +25,15 @@ import traceback
 # Setting UTF-8 encoding
 
 reload(sys)
-sys.setdefaultencoding('UTF-8')
+sys.stdout.encoding
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
 app.config.from_object('config')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 ushort_host = config.domain
-db = SQLAlchemy(app)
+
 # MySQL configurations
 
 host = config.host
@@ -113,62 +41,27 @@ user = config.user
 passwrd = config.passwrd
 db = config.db
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
-class Urls(db.Model):
-    id_ = db.Column("id_", db.Integer, primary_key=True)
-    original = db.Column("original", db.String())
-    short = db.Column("short", db.String())
-    url_tags=db.Column("Url tags",db.String())
-
-
 @app.route('/analytics/<short_url>')
 def analytics(short_url):
 
-	info_fetch , counter_fetch , browser_fetch , platform_fetch = list_data(short_url)
+	info_fetch , counter_fetch , browser_fetch = list_data(short_url)
 	return render_template("data.html" , host = ushort_host,info = info_fetch ,counter = counter_fetch ,\
-	 browser = browser_fetch , platform = platform_fetch)
+	 browser = browser_fetch)
 
 
 @app.route('/' , methods=['GET' , 'POST'])
-def shorten_url():
-    letters = string.ascii_lowercase + string.ascii_uppercase
-    while True:
-        rand_letters = random.choices(letters, k=3)
-        rand_letters = "".join(rand_letters)
-        short_url = Urls.query.filter_by(short=rand_letters).first()
-        if not short_url:
-            return rand_letters
-
 def index():
 
-	# conn = MySQLdb.connect(host , user , passwrd, db)
-	# cursor = conn.cursor()
+	conn = MySQLdb.connect(host , user , passwrd, db)
+	cursor = conn.cursor()
 	
 	# Return the full table to displat on index.
-	# list_sql = "SELECT * FROM WEB_URL;"
-	# cursor.execute(list_sql)
-	# result_all_fetch = cursor.fetchall()
+	list_sql = "SELECT * FROM WEB_URL;"
+	cursor.execute(list_sql)
+	result_all_fetch = cursor.fetchall()
 
-    if request.method == "POST":
-        url_received = request.form["nm"]
-        found_url = Urls.query.filter_by(long=url_received).first()
-
-        if found_url:
-            return redirect(url_for("display_short_url", url=found_url.short))
-        else:
-            short_url = shorten_url()
-            print(short_url)
-            new_url = Urls(url_received, short_url)
-            db.session.add(new_url)
-            db.session.commit()
-            return redirect(url_for("display_short_url", url=short_url))
-    else:
-        return render_template('url_page.html')
-		
-	'''if request.method == 'POST':
+	
+	if request.method == 'POST':
 		og_url = request.form.get('url_input')
 		custom_suff = request.form.get('url_custom')
 		tag_url = request.form.get('url_tag')
@@ -205,23 +98,23 @@ def index():
 			return render_template('index.html' , table = result_all_fetch, host = ushort_host,error = e)
 	else:	
 		e = ''
-		return render_template('index.html',table = result_all_fetch ,host = ushort_host, error = e )'''
+		return render_template('index.html',table = result_all_fetch ,host = ushort_host, error = e )
 	
 # Rerouting funciton	
 
 @app.route('/<short_url>')
 def reroute(short_url):
 
-	# conn = MySQLdb.connect(host , user , passwrd, db)
-	# cursor = conn.cursor()
+	conn = MySQLdb.connect(host , user , passwrd, db)
+	cursor = conn.cursor()
 	# platform = request.user_agent.platform
 	browser =  request.user_agent.browser
 	counter = 1
 
-	# Browser vars
+	# Platform , Browser vars
 	
 	browser_dict = {'firefox': 0 , 'chrome':0 , 'safari':0 , 'other':0}
-    # platform_dict = {'windows':0 , 'iphone':0 , 'android':0 , 'linux':0 , 'macos':0 , 'other':0}
+	# platform_dict = {'windows':0 , 'iphone':0 , 'android':0 , 'linux':0 , 'macos':0 , 'other':0}
 
 	# Analytics
 	if browser in browser_dict:
@@ -234,7 +127,7 @@ def reroute(short_url):
 	# else:
 	# 	platform_dict['other'] += 1
 			
-	# cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+	cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
 
 	try:
 		new_url = cursor.fetchone()[0]
@@ -243,11 +136,9 @@ def reroute(short_url):
 		
 		counter_sql = "\
 				UPDATE {tn} SET COUNTER = COUNTER + {og_counter} , CHROME = CHROME + {og_chrome} , FIREFOX = FIREFOX+{og_firefox} ,\
-				SAFARI = SAFARI+{og_safari} , OTHER_BROWSER =OTHER_BROWSER+ {og_oth_brow} , ANDROID = ANDROID +{og_andr} , IOS = IOS +{og_ios},\
-				WINDOWS = WINDOWS+{og_windows} , LINUX = LINUX+{og_linux}  , MAC =MAC+ {og_mac} , OTHER_PLATFORM =OTHER_PLATFORM+ {og_plat_other} WHERE S_URL = %s;".\
+				SAFARI = SAFARI+{og_safari} , OTHER_BROWSER =OTHER_BROWSER+ {og_oth_brow} WHERE S_URL = %s;".\
 				format(tn = "WEB_URL" , og_counter = counter , og_chrome = browser_dict['chrome'] , og_firefox = browser_dict['firefox'],\
-				og_safari = browser_dict['safari'] , og_oth_brow = browser_dict['other'] , og_andr = platform_dict['android'] , og_ios = platform_dict['iphone'] ,\
-				og_windows = platform_dict['windows'] , og_linux = platform_dict['linux'] , og_mac = platform_dict['macos'] , og_plat_other = platform_dict['other'])
+				og_safari = browser_dict['safari'] , og_oth_brow = browser_dict['other'])
 		res_update = cursor.execute(counter_sql, (short_url, ))
 		conn.commit()
 		conn.close()

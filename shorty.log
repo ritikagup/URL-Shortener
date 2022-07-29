@@ -1,0 +1,512 @@
+[2022-Jul-29 23:42] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+NameError: name 'MySQLdb' is not defined
+
+[2022-Jul-29 23:42] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+NameError: name 'MySQLdb' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 187, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a NameError.
+
+[2022-Jul-29 23:42] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:42] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+NameError: name 'MySQLdb' is not defined
+
+[2022-Jul-29 23:42] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+NameError: name 'MySQLdb' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 187, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a NameError.
+
+[2022-Jul-29 23:42] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:44] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+[2022-Jul-29 23:44] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 186, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a TypeError.
+
+[2022-Jul-29 23:44] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:44] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+[2022-Jul-29 23:44] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 186, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a TypeError.
+
+[2022-Jul-29 23:44] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:50] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+[2022-Jul-29 23:50] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 185, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a TypeError.
+
+[2022-Jul-29 23:50] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:50] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+[2022-Jul-29 23:50] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 185, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a TypeError.
+
+[2022-Jul-29 23:50] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:57] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+[2022-Jul-29 23:57] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 56, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 185, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a TypeError.
+
+[2022-Jul-29 23:57] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-29 23:57] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+[2022-Jul-29 23:57] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 109, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+TypeError: __init__() takes 1 positional argument but 5 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 185, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a TypeError.
+
+[2022-Jul-29 23:57] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 00:12] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 00:12] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 00:12] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 00:12] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 00:12] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 00:12] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 00:31] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 00:31] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 00:31] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 00:31] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 00:31] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 00:31] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED

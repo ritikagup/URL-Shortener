@@ -1,5 +1,5 @@
 import os
-
+import mysql.connector as MySQLdb
 table_name = "WEB_URL"
 
 # WTF config

@@ -1,4 +1,4 @@
-from urlparse import urlparse
+from urllib.parse import urljoin
 import random
 import string
 
@@ -18,11 +18,11 @@ def url_check(url):
 	"""
 	Expects a string as argument.
 	Retruns True , if URL is valid else False.
-	For detailed docs look into urlparse.
+	For detailed docs look into urljoin.
 	"""
 	min_attr = ('scheme' , 'netloc')
 	try:
-		result = urlparse(url)
+		result = urljoin(url)
 		if all([result.scheme, result.netloc]):
 			return True
 		else:
