@@ -130,7 +130,7 @@ def reroute(short_url):
 
 	try:
 		new_url = cursor.fetchone()[0]
-		print new_url
+		print (new_url)
 		# Update Counters 
 		
 		counter_sql = "\
