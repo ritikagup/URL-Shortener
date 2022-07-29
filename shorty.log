@@ -510,3 +510,687 @@ Traceback (most recent call last):
 TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
 
 [2022-Jul-30 00:31] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:02] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 01:02] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 01:02] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:02] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 01:02] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 01:02] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:05] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 01:05] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 55, in index
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 01:05] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:05] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+[2022-Jul-30 01:05] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 108, in reroute
+    conn = MySQLdb.connect(host , user , passwrd, db)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1049, "Unknown database 'ushort'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a OperationalError.
+
+[2022-Jul-30 01:05] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 60, in index
+    cursor.execute(list_sql)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 60, in index
+    cursor.execute(list_sql)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 60, in index
+    cursor.execute(list_sql)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 60, in index
+    cursor.execute(list_sql)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /kanu? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /kanu? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /kanu? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /kanu? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /kanu? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /kanu? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:17] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:26] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 60, in index
+    cursor.execute(list_sql)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:26] 127.0.0.1 GET http /? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 60, in index
+    cursor.execute(list_sql)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:26] 127.0.0.1 GET http /? 405 METHOD NOT ALLOWED
+[2022-Jul-30 01:26] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+[2022-Jul-30 01:26] 127.0.0.1 GET http /favicon.ico? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 130, in reroute
+    cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'ushort.web_url' doesn't exist")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\kanus\OneDrive\Documents\fullstack\TechWave project\UShort-url-just-shorten-it\app.py", line 184, in exceptions
+    return make_response(e , 405)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\helpers.py", line 223, in make_response
+    return current_app.make_response(args)
+  File "C:\Users\kanus\anaconda3\lib\site-packages\flask\app.py", line 2127, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a ProgrammingError.
+
+[2022-Jul-30 01:26] 127.0.0.1 GET http /favicon.ico? 405 METHOD NOT ALLOWED

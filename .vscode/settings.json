@@ -9,7 +9,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "K_Connections",
-            "database": "Web_URL",
+            "database": "USHORT",
             "username": "root",
             "password": "abcd26"
         }

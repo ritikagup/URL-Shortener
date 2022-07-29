@@ -11,7 +11,7 @@ from flask import jsonify , abort , make_response
 from check_encode import random_token , url_check
 from display_list import list_data
 
-from sql_table import mysql_table
+#from sql_table import mysql_table
 
 # Config import
 import config
