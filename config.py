@@ -5,15 +5,15 @@ table_name = "WEB_URL"
 # WTF config
 
 WTF_CSRF_ENABLED = True
-SECRET_KEY = 'the_very_secure_secret_security_key_that_no_will_ever_guess'
+SECRET_KEY = 'U_Short_Url_just_shorten_it'
 
 # MySQL Config
 
 
 host = "localhost"
 user = "root"
-passwrd = ""
-db = "SHORTY"
+passwrd = "abcd26"
+db = "USHORT"
 
 # Domain Host
 

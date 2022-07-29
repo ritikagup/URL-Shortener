@@ -4,9 +4,9 @@ import random
 import string
 import os
 
-# app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+#app = Flask(__name__)
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # db = SQLAlchemy(app)
 
@@ -102,9 +102,10 @@ os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
 app.config.from_object('config')
-
-shorty_host = config.domain
-
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+ushort_host = config.domain
+db = SQLAlchemy(app)
 # MySQL configurations
 
 host = config.host
@@ -112,27 +113,62 @@ user = config.user
 passwrd = config.passwrd
 db = config.db
 
+@app.before_first_request
+def create_tables():
+    db.create_all()
+
+class Urls(db.Model):
+    id_ = db.Column("id_", db.Integer, primary_key=True)
+    original = db.Column("original", db.String())
+    short = db.Column("short", db.String())
+    url_tags=db.Column("Url tags",db.String())
+
+
 @app.route('/analytics/<short_url>')
 def analytics(short_url):
 
 	info_fetch , counter_fetch , browser_fetch , platform_fetch = list_data(short_url)
-	return render_template("data.html" , host = shorty_host,info = info_fetch ,counter = counter_fetch ,\
+	return render_template("data.html" , host = ushort_host,info = info_fetch ,counter = counter_fetch ,\
 	 browser = browser_fetch , platform = platform_fetch)
 
 
 @app.route('/' , methods=['GET' , 'POST'])
+def shorten_url():
+    letters = string.ascii_lowercase + string.ascii_uppercase
+    while True:
+        rand_letters = random.choices(letters, k=3)
+        rand_letters = "".join(rand_letters)
+        short_url = Urls.query.filter_by(short=rand_letters).first()
+        if not short_url:
+            return rand_letters
+
 def index():
 
-	conn = MySQLdb.connect(host , user , passwrd, db)
-	cursor = conn.cursor()
+	# conn = MySQLdb.connect(host , user , passwrd, db)
+	# cursor = conn.cursor()
 	
 	# Return the full table to displat on index.
-	list_sql = "SELECT * FROM WEB_URL;"
-	cursor.execute(list_sql)
-	result_all_fetch = cursor.fetchall()
+	# list_sql = "SELECT * FROM WEB_URL;"
+	# cursor.execute(list_sql)
+	# result_all_fetch = cursor.fetchall()
 
+    if request.method == "POST":
+        url_received = request.form["nm"]
+        found_url = Urls.query.filter_by(long=url_received).first()
+
+        if found_url:
+            return redirect(url_for("display_short_url", url=found_url.short))
+        else:
+            short_url = shorten_url()
+            print(short_url)
+            new_url = Urls(url_received, short_url)
+            db.session.add(new_url)
+            db.session.commit()
+            return redirect(url_for("display_short_url", url=short_url))
+    else:
+        return render_template('url_page.html')
 		
-	if request.method == 'POST':
+	'''if request.method == 'POST':
 		og_url = request.form.get('url_input')
 		custom_suff = request.form.get('url_custom')
 		tag_url = request.form.get('url_tag')
@@ -156,36 +192,36 @@ def index():
 					conn.commit()
 					conn.close()
 					e = ''
-					return render_template('index.html' ,shorty_url = shorty_host+token_string , error = e )
+					return render_template('index.html' ,shorty_url = ushort_host+token_string , error = e )
 				else:
 					e = "The Custom suffix already exists . Please use another suffix or leave it blank for random suffix."
-					return render_template('index.html' ,table = result_all_fetch, host = shorty_host,error = e)
+					return render_template('index.html' ,table = result_all_fetch, host = ushort_host,error = e)
 			else:
 				e = "URL entered doesn't seem valid , Enter a valid URL."
-				return render_template('index.html' ,table = result_all_fetch, host = shorty_host,error = e)
+				return render_template('index.html' ,table = result_all_fetch, host = ushort_host,error = e)
 
 		else:
 			e = "Enter a URL."
-			return render_template('index.html' , table = result_all_fetch, host = shorty_host,error = e)
+			return render_template('index.html' , table = result_all_fetch, host = ushort_host,error = e)
 	else:	
 		e = ''
-		return render_template('index.html',table = result_all_fetch ,host = shorty_host, error = e )
+		return render_template('index.html',table = result_all_fetch ,host = ushort_host, error = e )'''
 	
 # Rerouting funciton	
 
 @app.route('/<short_url>')
 def reroute(short_url):
 
-	conn = MySQLdb.connect(host , user , passwrd, db)
-	cursor = conn.cursor()
-	platform = request.user_agent.platform
+	# conn = MySQLdb.connect(host , user , passwrd, db)
+	# cursor = conn.cursor()
+	# platform = request.user_agent.platform
 	browser =  request.user_agent.browser
 	counter = 1
 
-	# Platform , Browser vars
+	# Browser vars
 	
 	browser_dict = {'firefox': 0 , 'chrome':0 , 'safari':0 , 'other':0}
-	platform_dict = {'windows':0 , 'iphone':0 , 'android':0 , 'linux':0 , 'macos':0 , 'other':0}
+    # platform_dict = {'windows':0 , 'iphone':0 , 'android':0 , 'linux':0 , 'macos':0 , 'other':0}
 
 	# Analytics
 	if browser in browser_dict:
@@ -193,12 +229,12 @@ def reroute(short_url):
 	else:								
 		browser_dict['other'] += 1
 	
-	if platform in platform_dict.iterkeys():
-		platform_dict[platform] += 1
-	else:
-		platform_dict['other'] += 1
+	# if platform in platform_dict.iterkeys():
+	# 	platform_dict[platform] += 1
+	# else:
+	# 	platform_dict['other'] += 1
 			
-	cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
+	# cursor.execute("SELECT URL FROM WEB_URL WHERE S_URL = %s;" ,(short_url,) )
 
 	try:
 		new_url = cursor.fetchone()[0]
@@ -236,7 +272,7 @@ def search():
 		cursor.execute(search_tag_sql , (s_tag, ) )
 		search_tag_fetch = cursor.fetchall()
 		conn.close()
-		return render_template('search.html' , host = shorty_host , search_tag = s_tag , table = search_tag_fetch )
+		return render_template('search.html' , host = ushort_host , search_tag = s_tag , table = search_tag_fetch )
 
 
 @app.after_request
