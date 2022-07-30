@@ -42,5 +42,5 @@ def stats():
     return render_template('stats.html', links=links)
 
 @short.errorhandler(404)
-def page_not_found():
-    return render_template('404.html')
+def page_not_found(e):
+    return render_template('404.html'), 404
