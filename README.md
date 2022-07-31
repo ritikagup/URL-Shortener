@@ -3,8 +3,7 @@ Hi we made this project during Full Stack development with Python Training progr
 
 ## About the project :
 This project is a simple url shortener. There is a sign in page. If not authorized shows '404 page not found error page'. After authorizing, it takes url 
-from the webpage viewer and shortens it. There is a random generation of upto 6 characters(alphabet and numeric values). There is also a copy button to copy the new generated url. 
-Original url, shortened url, number of visits on webpage and date is stored on the backend in a database.
+from the webpage viewer and shortens it. There is a random generation of upto 6 characters(alphabet and numeric values). There is also a copy button to copy the new generated url. Original url, shortened url, number of visits on webpage and date-time of visit is stored on the backend in a database.
 
 <br>
 
