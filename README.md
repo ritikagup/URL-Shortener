@@ -19,13 +19,17 @@ Fourthly, the shortened url is generated and shown on screen.
 Lasty, there is a copy button to copy the url.
 </br>
 
-
+</br>
+</br>
 
 Follow TechWave on: 
+##
 <li><a href="https://www.linkedin.com/company/techwave-courses/">LinkedIn</a>
 <li><a href="https://www.instagram.com/techwave.courses/">Instagram</a>
 
 Follow Contributors on:
+##
+
 Aradhya Rajput
 <li><a href="https://www.linkedin.com/in/aradhya-41364121a">LinkedIn</a>
 
