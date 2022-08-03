@@ -12,11 +12,11 @@ Python,
 HTML
 
 ## How the program works :
-Firstly, it askes for signing in.
+Firstly, it asks for signing in.
 Secondly, it opens webpage if authorization is successful, otherwise shows a '404 page not found' error.
 Thirdly, it takes url input from the viewer and user clicks on 'Shorten' button to proceed.
 Fourthly, the shortened url is generated and shown on screen.
-Lasty, there is a copy button to copy the url.
+Lastly, there is a copy button to copy the url.
 </br>
 
 </br>
