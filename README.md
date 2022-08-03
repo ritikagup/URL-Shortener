@@ -30,6 +30,10 @@ Follow TechWave on:
 Follow Contributors on:
 ##
 
+Kanushree Anand
+<li><a href="https://www.linkedin.com/in/kanushree-anand-21b03523b/">LinkedIn</a>
+<li><a href="https://www.instagram.com/kanushreeanand/"> Instagram</a>
+
 Aradhya Rajput
 <li><a href="https://www.linkedin.com/in/aradhya-41364121a">LinkedIn</a>
 
@@ -41,6 +45,3 @@ Ritika Gupta
 <li><a href="https://www.linkedin.com/in/ritika-gupta-10507122a/">LinkedIn</a>
 <li><a href="https://www.instagram.com/ritika_1302/?hl=en"> Instagram</a>
 
-Kanushree Anand
-<li><a href="https://www.linkedin.com/in/kanushree-anand-21b03523b/">LinkedIn</a>
-<li><a href="https://www.instagram.com/kanushreeanand/"> Instagram</a>
