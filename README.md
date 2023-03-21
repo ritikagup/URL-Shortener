@@ -2,14 +2,11 @@
 Hi we made this project during Full Stack development with Python Training program, conducted by <b> TechWave </b>.
 
 ## About the project :
-This project is a simple url shortener. There is a sign in page. If not authorized shows '404 page not found error page'. After authorizing, it takes url 
-from the webpage viewer and shortens it. There is a random generation of upto 6 characters(alphabet and numeric values). There is also a copy button to copy the new generated url. Original url, shortened url, number of visits on webpage and date-time of visit is stored on the backend in a database.
-
+Designed a website that provides the service of a URL shortener which takes the URL that the user inputs and shortens it by randomly generating a string of up to 6 characters (alphanumeric values). Implemented features such as the sign-in page, 404 error page, and copy button to copy the newly generated URL. The collected data (Original URL, shortened URL, number of visits on the webpage, and date-time of the visit) is stored on the backend in an SQL database. 
 <br>
 
 ## Tech Stack used :
-Python,
-HTML
+Python, HTML, SQL, Sqlite3, Flask
 
 ## How the program works :
 Firstly, it asks for signing in.
